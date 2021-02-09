@@ -14,4 +14,6 @@ for cog in os.listdir('cogs'):
     if cog.endswith('.py'):
         client.load_extension(f'cogs.{cog[:-3]}')
 
+print(os.environ['BOT_TOKEN'])
+
 client.run(str(os.environ['BOT_TOKEN']))
