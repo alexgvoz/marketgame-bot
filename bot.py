@@ -14,4 +14,4 @@ for cog in os.listdir('cogs'):
     if cog.endswith('.py'):
         client.load_extension(f'cogs.{cog[:-3]}')
 
-client.run(S3Connection(str(os.environ['BOT_TOKEN'])))
+client.run(str(S3Connection(os.environ['BOT_TOKEN'])))
